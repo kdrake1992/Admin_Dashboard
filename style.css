@@ -26,6 +26,8 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
+
+    background-color: #f9fafb;
 }
 
 .header .searchBar {
@@ -36,8 +38,19 @@ body {
 .header input {
     height: 20px;
     width: 75%;
+    border: none;
     border-radius: 10px;
-    background-color: rgb(241, 232, 232);
+    background-color: #d1d5db;
+}
+
+.header button {
+    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    background-color: #0284c7;
 }
 
 .sidebar {
@@ -46,7 +59,8 @@ body {
     display: grid;
     grid-template-rows: 1fr 3fr 6fr;
 
-    background-color:rgb(87, 174, 233);
+    color: white;
+    background-color:#0284c7;
 }
 
 
@@ -81,7 +95,7 @@ body {
 
 
 
-    background-color: lightgray;
+    background-color: #e5e7eb;
 }
 
 .dashboard .projects {
