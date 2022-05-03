@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.header {
+    grid-column: 2/5 ;
+
+    display: grid;
+}
+
+.sidebar {
+    grid-row: 1/6;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 6fr;
+
+    background-color:lightblue;
+
+}
+
+.dashboard {
+    grid-row: 2/6;
+    grid-column: 2/5 ;
+
+    display: grid;
+
+
+    background-color: lightgray;
+}
