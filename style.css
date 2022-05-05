@@ -16,8 +16,8 @@ body {
     height: 100vh;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, minmax(0,1));
+    grid-template-rows: repeat(5, minmax(0,1));
 }
 
 .header {
@@ -25,26 +25,66 @@ body {
 
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(0,1));
 
     background-color: #f9fafb;
+    padding: 0px 1.5rem;
 }
 
 .header .searchBar {
+    display: flex;
     align-self: center;
+    width: 100%;
+    gap: 10px;
 
 }
 
-.header input {
+form input {
+    width: 100%;
     height: 20px;
-    width: 75%;
+    width: 325px;
     border: none;
     border-radius: 10px;
     background-color: #d1d5db;
 }
 
+.header .topRightHeader {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+}
+
+#iconsmall {
+    height: 50px;
+    width: auto;
+}
+
+.header .username {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.header .username img {
+    height: 75px;
+    width: auto;
+}
+
+#small {
+    font-size: var(--small);
+}
+
+
+.header .headerButtons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+}
+
 .header button {
-    
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -61,6 +101,7 @@ body {
 
     color: white;
     background-color:#0284c7;
+
 }
 
 
@@ -88,10 +129,12 @@ body {
 .dashboard {
     grid-row: 2/6;
     grid-column: 2/5 ;
+    padding: 25px;
 
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, minmax(0,1));
+    grid-template-columns: 4fr 2fr;
+    gap: 10px;
 
 
 
@@ -103,19 +146,34 @@ body {
     grid-column: 1/2 ;
     
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .dashboard .projects .project {
     display: flex;
     flex-direction: column;
 
-    background-color: white;
-    width: 200px;
+    background-color: #f9fafb;
+    width: 275px;
     height: 150px;
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
+
     border-radius: 10px;
     border-left: solid 10px orange;
+
+    position: relative;
+}
+
+.dashboard .projects .projecticons {    
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 275px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
 }
 
 .dashboard .projects p, .dashboard .trending .usertrend {
@@ -126,14 +184,22 @@ body {
 .dashboard .annoucements {
     grid-row: 1/2;
     grid-column: 2/3 ;
-    
-    
-    display: grid;
+
+    border-radius: 10px;
+    background-color: #f9fafb;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .dashboard .trending {
     grid-row: 3/4;
     grid-column: 2/3;
+
+    border-radius: 10px;
+    background-color: #f9fafb;
     
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    
 }
