@@ -109,23 +109,22 @@ form input {
 
 .sidebar .title, .side1 li, .side2 li {
     display: flex;
-    padding: .25em 1em;
+    padding: .25rem 1rem;
 
 }
 
 .side1 li p, .side2 li p {  
     align-items: center;
-    padding-left: 1rem;
+    padding-left: 2rem;
 }
 
 .sidebar .title {
     align-items: center;
-    padding-left: 1rem;
 }
 
 .sidebar .title h2 {
     align-items: center;
-    padding-left: .2rem;
+    padding-left: .3rem;
 }
 
 
